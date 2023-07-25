@@ -50,53 +50,7 @@ private:
     }
 
     llvm::Value *gen(const Value &exp) {
-        auto x = exp;
-        // switch (exp.type) {
-
-        //     case ExpType::NUMBER: 
-        //         return builder->getInt32(exp.number);
-        //         break;
-        
-        //     case ExpType::STRING: 
-        //         auto re = std::regex("\\\\n");
-        //         auto str = std::regex_replace(exp.string, re, "\n");
-        //         return builder->CreateGlobalStringPtr(str);
-        //         break;
-
-        //     case ExpType::SYMBOL:
-        //         if (exp.string == "true" || exp.string == "false") {
-        //             return builder->getInt1(exp.string == "true" ? true : false);
-        //         }
-        //         break;
-
-        //     case ExpType::LIST:
-        //         auto tag = exp.list[0];
-
-        //         if(tag.type == ExpType::SYMBOL) {
-        //             auto op = tag.string;
-
-        //             if(op == "printf") {
-        //                 auto printFn = module->getFunction("printf");
-
-        //                 std::vector<llvm::Value*> args{};
-
-        //                 for (auto i = 1; i < exp.list.size(); i++) {
-        //                     args.push_back(gen(exp.list[i], env));
-        //                 }
-        //                 return builder->CreateCall(printFn, args);
-        //             }
-        //         }
-
-
-        //         break;
-
-
-        //     default:
-        //         break;
-
-        // }
-
-        // return builder->getInt32(exp.number);
+       return builder->getInt32(0);
     }
 
     void saveModuleToFile(const std::string& fileName) {
