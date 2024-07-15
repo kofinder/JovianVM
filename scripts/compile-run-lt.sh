@@ -1,1 +1,0 @@
-syntax-cli -g src/parser/TestGrammar.bnf -m LALR1 --file example.lt --validate

@@ -1,3 +1,5 @@
-# JovianVM
-don't talk too much
+# Run Command
+- `$ sh compile-run.sh`
 
+# Course
+ - http://dmitrysoshnikov.com/
