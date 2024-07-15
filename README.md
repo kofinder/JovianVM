@@ -1,5 +1,5 @@
 # Run Command
 - `$ sh compile-run.sh`
 
-# Course
+# Credit
  - http://dmitrysoshnikov.com/
