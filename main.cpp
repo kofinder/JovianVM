@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 
-#include "./src/FinderVM.h"
+#include "./src/JovianVM.h"
 
 void printHelp() {
   std::cout << "\nUsage: finder-vm [options]\n\n"
@@ -54,7 +54,7 @@ int main(int argc, char const *argv[]) {
   /**
    * Compiler instance.
    */
-  FinderVM vm;
+  JovianVM vm;
 
   /**
    * Generate LLVM IR.

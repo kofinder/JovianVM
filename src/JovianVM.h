@@ -52,10 +52,10 @@ static const size_t RESERVED_FIELDS_COUNT = 1;
         return builder->Op(op1, op2, varName); \
     } while (false)
 
-class FinderVM
+class JovianVM
 {
 public:
-    FinderVM() : parser(std::make_unique<JovianParser>())
+    JovianVM() : parser(std::make_unique<JovianParser>())
     {
         moduleInit();
         setupExternalFunction();
@@ -554,7 +554,7 @@ private:
 
         if (cls == nullptr)
         {
-            DIE << "[EVALLVM]: Unknow class" << cls;
+            DIE << "[JovianVM]: Unknow class" << cls;
         }
 
         // auto instance = name.empty() ? builder->CreateAlloca(cls)
@@ -939,7 +939,7 @@ private:
     {
         // Open a new context and module.
         ctx = std::make_unique<llvm::LLVMContext>();
-        module = std::make_unique<llvm::Module>("EvaLLVM", *ctx);
+        module = std::make_unique<llvm::Module>("JovianVM", *ctx);
 
         // Create a new builder for the module.
         builder = std::make_unique<llvm::IRBuilder<>>(*ctx);

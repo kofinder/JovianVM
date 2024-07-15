@@ -8,7 +8,7 @@ clang++ -o jovian-vm `llvm-config-14 --cxxflags --ldflags --system-libs --libs c
 lli-14 ./out.ll
 
 # Optimize the output:
-# opt-14 ./out.ll -O3 -S -o ./out-opt.ll
+opt-14 ./out.ll -O3 -S -o ./out-opt.ll
 
 # Compile ./out.ll with GC:
 #
